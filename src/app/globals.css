@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 140 14% 97%;
+  --foreground: 158 22% 11%;
+  --card: 0 0% 100%;
+  --card-foreground: 158 22% 11%;
+  --primary: 154 46% 23%;
+  --primary-foreground: 60 30% 98%;
+  --secondary: 145 20% 94%;
+  --secondary-foreground: 154 40% 18%;
+  --muted: 145 16% 94%;
+  --muted-foreground: 155 9% 40%;
+  --accent: 148 42% 91%;
+  --accent-foreground: 154 46% 18%;
+  --destructive: 4 66% 46%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 150 13% 88%;
+  --input: 150 13% 85%;
+  --ring: 154 46% 30%;
+  --radius: 1rem;
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: Manrope, ui-sans-serif, system-ui, sans-serif;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+::selection {
+  background: hsl(var(--accent));
+  color: hsl(var(--accent-foreground));
+}
+
+.panel {
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+  border-radius: 1rem;
+  box-shadow: 0 1px 2px hsl(158 22% 11% / 0.04);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-ping,
+  .animate-pulse,
+  .animate-spin {
+    animation: none !important;
+  }
+}
